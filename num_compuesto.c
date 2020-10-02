@@ -10,12 +10,16 @@
 void num_compuesto();
 int main(){
     int num;
-    do{
-    printf("Digite un numero mayor que 1:"); 
-    scanf("%d", &num);  
-    }while (num < 2); 
-    num_compuesto(num);
-    return 0;
+    while(num > 0){
+        printf("Digite un numero mayor que 1 o digite 0 para salir: \n"); 
+        scanf("%d", &num);  
+        num_compuesto(num);       
+    if(num == 0){
+        printf("Salio!");
+        break;
+      }
+    }
+    return 0; 
 }
 void num_compuesto(int num){
     int cont=0;  
@@ -23,7 +27,7 @@ void num_compuesto(int num){
         if (num%i == 0) cont++;  
         } 
     if (cont == 2)  
-        printf("El numero no es compuesto.");
+        printf("El numero no es compuesto.\n");
     else    
-        printf("El numero es compuesto.");
+        printf("El numero es compuesto.\n");
 }
