@@ -10,11 +10,16 @@
 void num_feliz();
 int main(){
     int num;
-    do{
-    printf("Introduzca un numero: ");
-    scanf("%d", &num);
-    }while(num < 0);
-    num_feliz(num);
+    printf("INGRESE ALGUN NUMERO NATURAL O INGRESE 0 PARA SALIR\n");
+    while(num>0){
+        printf("Introduzca un numero: \n");
+        scanf("%d", &num);
+        if(num>0)num_feliz(num);
+        if(num == 0){
+            printf("SALIO!!\n");
+            break;
+        }
+    }
     return 0;
 }
 void num_feliz(int num){
@@ -32,9 +37,9 @@ tambien encontre otra regla que decia que al llegar al numero 89 se encerraba en
         n = sum;
     }
     if(n == 1){
-        printf("El numero es feliz");
+        printf("El numero es feliz\n");
     }
     else{
-        printf("El numero es infeliz");
+        printf("El numero es infeliz\n");
     }
 }

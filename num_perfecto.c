@@ -10,10 +10,16 @@
 void num_perfecto();
 int main(){
     int num;
-    printf("Digite un numero:" );
-	scanf("%d", &num);
-    num_perfecto(num);
-    return 0;
+    while(num > 1){
+		printf("Digite un numero o digite 0 para salir: \n");
+		scanf("%d", &num);
+		if(num>0)num_perfecto(num);
+		if(num == 0){
+			printf("Salio!!\n");
+			break;
+		}
+	}
+	return 0;
 }
 void num_perfecto(int num){
 	int suma;
@@ -23,9 +29,9 @@ void num_perfecto(int num){
 		}
 	}
 	if(suma == num){
-		printf("El numero es perfecto");
+		printf("El numero es perfecto\n");
 	}
 	else{
-		printf("El numero NO es perfecto");
+		printf("El numero NO es perfecto\n");
 	}
 }

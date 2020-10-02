@@ -13,7 +13,7 @@ int main(){
     while(num > 0){
         printf("Digite un numero mayor que 1 o digite 0 para salir: \n"); 
         scanf("%d", &num);  
-        num_compuesto(num);       
+        if(num>0)num_compuesto(num);       
     if(num == 0){
         printf("Salio!");
         break;

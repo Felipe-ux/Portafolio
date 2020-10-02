@@ -10,11 +10,18 @@
 void num_comprimos();
 int main(){
     int num1, num2;
-    printf("Ingrese el primer numero: ");
-    scanf("%d",&num1);
-    printf("\nIngrese el segundo numero: ");
-    scanf("%d",&num2);
-    num_comprimos(num1, num2);
+    while(num1>0 && num2>0){
+        printf("INGRESE CUALQUIER NUMERO NATURAL O INGRESE 0 PARA SALIR\n");
+        printf("Ingrese el primer numero: \n");
+        scanf("%d",&num1);
+        printf("\nIngrese el segundo numero: \n");
+        scanf("%d",&num2);
+        num_comprimos(num1, num2);
+        if(num1==0 || num2==0){
+            printf("Salio!!\n");
+            break;
+        }
+    }
     return 0;
 }
 void num_comprimos(int num1, int num2){
@@ -30,9 +37,9 @@ void num_comprimos(int num1, int num2){
         }  
     }while(residuo != 0);
     if(mcd == 1){
-        printf("Los numeros son coprimos");
+        printf("Los numeros son coprimos\n");
     }
     else{
-        printf("Los numeros NO son coprimos");
+        printf("Los numeros NO son coprimos\n");
     }      
 }

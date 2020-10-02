@@ -1,13 +1,13 @@
 /*===========================================================*/
-/* Control1 - Numero deficiente - ICI125 ProgramaciónI	     */
-/* Determinar si 1 numero entero es deficiente.              */
-/* Para compilar gcc num_deficiente.c -o eje7                */
-/* Para ejecutar ./eje7							             */
+/* Control1 - Numero curioso - ICI125 ProgramaciónI	         */
+/* Determinar si 1 numero entero es curioso.                 */
+/* Para compilar gcc num_curioso.c -o eje8                   */
+/* Para ejecutar ./eje8							             */
 /* Autores: Felipe Leviñir - Nicolas Veas                    */
 /* Profesoras: Ana Aguilera - Eliana Providel                */
 /*===========================================================*/
-#include <stdio.h>
-int num_deficiente();
+#include <stdio.h> 
+int num_curioso();
 int main(){
     int num;
     printf("INGRESE UN NUMERO ENTERO O INGRESE 0 PARA SALIR\n");
@@ -15,11 +15,11 @@ int main(){
         printf("Introduzca un numero: \n");
         scanf("%d", &num);
         if(num>0){
-            if(num_deficiente(num) < num){
-                printf("\nEl numero es deficiente \n");
+           if(num_curioso(num) == num){
+                printf("Numero curioso\n");
             }
             else{
-            printf("\nEl numero NO es deficiente \n");
+                printf("NO es curioso\n");
             }
         }
         if(num == 0){
@@ -29,12 +29,9 @@ int main(){
     }
     return 0;
 }
-int num_deficiente(int num){
-    int sum=0;
-    for(int i=1; i<=num/2; i++){
-        if(num % i == 0){
-            sum += i;
-        }
-    }
-    return sum;
+int num_curioso(int num){
+    int digito,elevado;
+    elevado = num*num;
+    digito = elevado%(100);
+    return digito;
 }

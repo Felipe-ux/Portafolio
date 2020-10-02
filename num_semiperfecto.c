@@ -11,10 +11,14 @@ int num_semiperf();
 int main(){
     int num=0;
     do{
-    printf("Introduzca un numero: ");
+    printf("Introduzca un numero o digite 0 para salir del programa: \n");
     scanf("%d", &num);
+    if(num == 0){
+        printf("SALIO!!!\n");
+        break;
+        }
     }while(num < 0);
-    printf("La suma de algunos de sus divisores es: %d\n ",num_semiperf(num));
+    if(num>0)printf("La suma de algunos de sus divisores es: %d\n ",num_semiperf(num));
     return 0;
 }
 int num_semiperf(int num){

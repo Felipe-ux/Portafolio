@@ -9,15 +9,23 @@
 #include <stdio.h>
 int num_abundante();
 int main(){
-    int num=0;
-    do{
-    printf("Introduzca un numero: ");
-    scanf("%d", &num);
-    }while(num < 0);
-    if(num_abundante(num) > num){
-        printf("\nEl numero es abundante ");
-    }else{
-        printf("\nEl numero NO es abuntate ");
+    int num;
+    printf("INGRESE UN NUMERO ENTERO O INGRESE 0 PARA SALIR\n");
+    while(num>0){
+        printf("Introduzca un numero: \n");
+        scanf("%d", &num);
+        if(num>0){
+            if(num_abundante(num) > num){
+                printf("\nEl numero es abundante \n");
+            }
+            else{
+                printf("\nEl numero NO es abuntate \n");
+            }
+        }
+        if(num==0){
+            printf("SALIO!!\n");
+            break;
+        }
     }
     return 0;
 }
