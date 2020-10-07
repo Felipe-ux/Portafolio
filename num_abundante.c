@@ -10,8 +10,8 @@
 int num_abundante();
 int main(){
     int num;
-    printf("INGRESE UN NUMERO ENTERO O INGRESE 0 PARA SALIR\n");
     while(num>0){
+        printf("\n\nINGRESE UN NUMERO ENTERO O INGRESE 0 PARA SALIR\n\n");
         printf("Introduzca un numero: \n");
         scanf("%d", &num);
         if(num>0){

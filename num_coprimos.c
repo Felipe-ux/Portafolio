@@ -11,16 +11,30 @@ void num_comprimos();
 int main(){
     int num1, num2;
     while(num1>0 && num2>0){
-        printf("INGRESE CUALQUIER NUMERO NATURAL O INGRESE 0 PARA SALIR\n");
+        printf("\n\n INGRESE ALGUN NUMERO NATURAL O INGRESE EN LAS 2 OPCIONES 0 PARA SALIR \n\n");
         printf("Ingrese el primer numero: \n");
         scanf("%d",&num1);
-        printf("\nIngrese el segundo numero: \n");
-        scanf("%d",&num2);
-        num_comprimos(num1, num2);
-        if(num1==0 || num2==0){
-            printf("Salio!!\n");
-            break;
+        if(num1==0){
+            printf("\nIngrese el segundo numero: \n");
+            scanf("%d",&num2);
+            if(num2==0){
+                printf("SALIO!! \n");
+                break;
+            }
         }
+        else{
+            printf("\nIngrese el segundo numero: \n");
+            scanf("%d",&num2);
+        }
+        while(num1 <= 0){
+            printf("Numero 1 invalido, ingreselo nuevamente: \n");
+            scanf("%d",&num1);
+        }
+        while(num2 <= 0){
+            printf("Numero 2 invalido, ingreselo nuevamente: \n");
+            scanf("%d",&num2);
+        }
+    num_comprimos(num1, num2);
     }
     return 0;
 }

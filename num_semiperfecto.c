@@ -28,7 +28,7 @@ int num_semiperf(int num){
             sum += i;
         }
     }
-    sum -=1;
+    sum -=3;
     if(num == sum){
         printf("EL numero es semiperfecto \n");
     }    
